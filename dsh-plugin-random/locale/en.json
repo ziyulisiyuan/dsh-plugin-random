@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Random Tools",
+    "description": "CSPRNG-based random numbers, strings, bytes, UUIDs and shuffles. Agents call these tools instead of inventing random values."
+  }
+}

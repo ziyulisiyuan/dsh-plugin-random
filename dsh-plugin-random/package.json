@@ -1,0 +1,37 @@
+{
+  "name": "dsh-plugin-random",
+  "version": "1.0.0",
+  "description": "CSPRNG-backed random tools for DSH agents: range-bound random numbers (batch, seedable), custom-length strings from chosen character sets, random bytes, UUID v4, and unbiased shuffles. Agents call these tools instead of inventing random values.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "cordis-plugin",
+    "random",
+    "random-number",
+    "csprng",
+    "uuid",
+    "shuffle",
+    "seed",
+    "password-generator",
+    "agent-tools"
+  ]
+}

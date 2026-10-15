@@ -1,0 +1,6 @@
+# dsh-plugin-random bundle patch: one row. The host half (index.js)
+# registers the five random_* tools and a standing system-prompt section
+# that tells agents to call them instead of inventing random values.
+- insert:
+    - id: dsh-plugin-random
+      name: dsh-plugin-random
