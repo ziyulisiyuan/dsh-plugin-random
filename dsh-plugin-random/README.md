@@ -83,26 +83,6 @@ random_string({ "length": 8, "chars": "ABCDEF" })                     → 自定
 
 插件注册工具的同时注入一条系统提示段（`order: 9500`），内容要求 Agent 在需要随机值时调用 `random_*` 工具而非自行编造。因此新会话无需任何配置或提醒，Agent 即可看到并使用这些工具。
 
-## 安装
-
-插件是纯 Host bundle，无依赖、无构建步骤。
-
-方式一，本地目录安装（Agent 会话内）：
-
-```
-plugin_manager → action: install_bundle → target: <本目录绝对路径>
-```
-
-方式二，放进 `$DSH_HOME/plugins/` 后按方式一安装，或在 profile 的 `package.json` 中以 `link:` 引用。
-
-方式三，npm（尚未发布；发布后可用）：
-
-```
-dsh plugin --profile <profile> add dsh-plugin-random
-```
-
-安装后当前 profile 的所有会话生效。修改 `index.js` 后需重启 DSH 才会加载新模块。
-
 ## 验证
 
 ```
@@ -131,7 +111,7 @@ node test.mjs
 
 - DSH / Cordis Host 插件，仅 Host 侧，无浏览器端代码。
 - 依赖 `tools` 与 `systemPrompt` 服务（DSH 基础组合自带）。
-- 随机源为 Node 内置 `node:crypto`,无第三方依赖。
+- 随机源为 Node 内置 `node:crypto`，无第三方依赖，无构建步骤。
 
 ## License
 
